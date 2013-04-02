@@ -128,7 +128,15 @@
             <a href="mailto:bry@bryanbibat.net">bry@bryanbibat.net</a>.
           %p You can also contact me through skype (<a href="skype:bry.bibat?chat">bry.bibat</a>) as long as I am online.
           
-          %p <a href="skype:bry.bibat?chat"><img src="http://mystatus.skype.com/bigclassic/bry%2Ebibat" style="border: none;" width="182" height="44" alt="My status" /></a>
+          %script{:src => "//cdn.dev.skype.com/uri/skype-uri.js", :type => "text/javascript"}
+          %div{:id => "SkypeButton_Chat_bry.bibat_1"}
+            :javascript
+              Skype.ui({
+                "name": "chat",
+                "element": "SkypeButton_Chat_bry.bibat_1",
+                "participants": ["bry.bibat"],
+                "imageSize": 32
+              });
         .span6
           %h3 Network
           %p.social-network Visit my sites at
@@ -140,7 +148,7 @@
             %li
               %a{:href => "https://plus.google.com/104632444453004296785"} Google Plus
             %li
-              %a{:href => "https://speakerdeck.com/u/bryanbibat"} Speaker Deck
+              %a{:href => "https://speakerdeck.com/bryanbibat"} Speaker Deck
 
       .row#portfolio
         .span12
@@ -404,4 +412,3 @@
       } catch( err ) {}
     %noscript
       <img src="http://analytics.bryanbibat.net/piwik.php?idsite=1" style="border:0" alt="" />
-    %script{:type => "text/javascript", :src => "http://download.skype.com/share/skypebuttons/js/skypeCheck.js"}\
