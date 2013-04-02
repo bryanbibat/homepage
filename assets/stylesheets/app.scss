@@ -1,0 +1,73 @@
+@import "bootstrap";
+@import "bootstrap-responsive";
+@import "font-awesome";
+@import "colorbox";
+
+.hero-unit {
+  text-align: center;
+  background: none;
+  border: none;
+  h1 {
+    font-size: 100px;
+    .highlight {
+      color: #2049a2;
+    }
+  }
+  .explanation {
+    font-size: 0.8em;
+    .guru {
+      font-weight: bold;
+      font-family: "Times New Roman","Times","New York","Georgia","Garamond",serif;
+    }
+    .ninja {
+      color: orange;
+      font-weight: bold;
+    }
+    .robot-zombie {
+      font-weight: bold;
+    }
+  }
+}
+
+#about {
+  p {
+    font-size: 120%;
+  }
+  p.last-para {
+    font-size: 90%;
+  }
+  img {
+    margin: 0 0 20px 20px;
+  }
+}
+
+.screenshots img {
+  margin: 10px 0 20px 20px;
+}
+
+.hero-unit {
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+h3, h4 {
+  margin-top: 40px;
+}
+
+.highlight {
+  color: #2049A2;
+}
+
+h4, h5 {
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+}
+
+footer, .footer {
+  background: #ddd;
+  margin-top: 40px;
+  padding: 20px 0;
+}

@@ -1,0 +1,407 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:rel => "stylesheet", :href => stylesheet_path('app') } 
+    %title Bryan Bibat | Robot Zombie Software Developer
+    %meta{:content => "A portfolio website of a software engineer", :name => "description"}/
+    %meta{:content => "Bryan Bibat | Robot Zombie Software Developer", :property => "og:title"}/
+    %meta{:content => "A portfolio website of a software engineer", :property => "og:description"}/
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "http://bryanbibat.net/", :property => "og:url"}/
+    %meta{:content => image_path("opengraph.png"), :property => "og:image"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "/apple-touch-icon-144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
+    %link{:href => "/apple-touch-icon-114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
+    %link{:href => "/apple-touch-icon-72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
+    %link{:href => "/apple-touch-icon-57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  %body{:"data-spy" => "scroll", :"data-target" => ".navbar", :"data-offset" => "40"}
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "http://bryanbibat.net"} Bryan Bibat
+          #main-menu.nav-collapse.collapse
+            %ul#main-menu-left.nav
+              %li
+                %a{:href => "#about"} About
+              %li
+                %a{:href => "#services"} Services
+              %li
+                %a{:href => "#connect"} Connect
+              %li
+                %a{:href => "#portfolio"} Portfolio
+              %li
+                %a{:href => "#bio"} Bio
+              %li
+                %a{:href => "http://blog.bryanbibat.net"} 
+                  Blog
+                  %i.icon-share-alt
+
+    .hero-unit
+      %h1
+        %span.highlight> BRYAN
+        BIBAT
+      %h2
+        robot zombie software developer
+        %sup> *
+      %p.explanation
+        %sup> *
+        because
+        %span.guru guru
+        is
+        %em soooo Web 1.0
+        and
+        %span.ninja ninja
+        isn't as awesome as
+        %span.robot-zombie robot zombies
+    .container.main-container
+      .row#about
+        .span12
+          %h3 About this site
+          %img.pull-right{ :src => image_path("profile.jpg"), :alt => "profile pic", :title => "me pwning mac users with my trusty netbook" }
+          %p
+            Hi, I'm <span class="highlight">Bryan Bibat</span> and I'm a 
+            <span class="highlight">freelance software engineer</span>
+            based in Taguig City, Philippines. I have 8 years of experience in 
+            developing software, mainly web applications.
+          %p
+            This is my mini-portfolio website. Here you can <a href="#portfolio" onclick="$.scrollTo('#portfolio', 200 ); return false;">browse</a> 
+            what little work I could claim as my own (long story, just click the 
+            link for a short explanation). You could also check what <a href="#services" onclick="$.scrollTo('#services', 200 ); return false;">services</a> 
+            I offer.
+          %p.last-para
+            I guess you have some time on your hands since you're still reading this. In that case, you might want to head over to the <a href="#bio" onclick="$.scrollTo('#bio', 200 ); return false;">bio</a> section to know more about me. If you <em>really</em> have a lot of time on your hands, why not head over to <a href="http://blog.bryanbibat.net">my blog</a> and read about the geeky stuff I'm into.
+
+      .row#services
+        .span12
+          %h3 Services
+          %h4 Important note
+          %p
+            %strong.highlight I am only available for contractual or part-time work.
+          %h4 
+          %h4 I normally offer the following services:
+          %ul
+            %li
+              %strong Web Development
+              \- mainly Ruby on Rails, but I'm ok with other web frameworks.
+            %li
+              %strong Systems Analysis and Design
+              \- from Requirements Analysis, to Database Design, to Application Architecture and practically everything in between.
+            %li
+              %strong Teaching and Tutorials
+              \- from basic Computer Science to specific technologies. See also 
+              %em Pangkaraniwang Developer
+              below.
+          
+          %h4
+            I 
+            %span.do-not do not 
+            offer the following services:
+
+          %ul
+            %li
+              %strong Web / Graphic Design work 
+              \- this page would've been much prettier if I was a designer.
+            %li
+              %strong Academic work e.g. thesis writing, solving machine problems
+              \- I don't want to lower further the standards of local IT professionals. Instead of making me do your dirty work, I would prefer that you hire me as a tutor.
+            %li
+              %strong Non-agile "grunt-work" 
+              \- I don't want to work 40+ hour work weeks on your run-of-the-mill software sweatshop.
+            %li
+              %strong Non-Rails teaching gigs without training material 
+              \- Good training material requires at least a month of preparation. Asking me to teach a class without those on hand would effectively reduce my trainer's fee by 80%. In short, if you don't have training material for the course I'm going to teach, prepare to pay me for the extra effort.
+          
+      .row#connect
+        .span6
+          %h3 Contact
+          %p
+            For inquiries, you can contact me at my e-mail address 
+            <a href="mailto:bry@bryanbibat.net">bry@bryanbibat.net</a>.
+          %p You can also contact me through skype (<a href="skype:bry.bibat?chat">bry.bibat</a>) as long as I am online.
+          
+          %p <a href="skype:bry.bibat?chat"><img src="http://mystatus.skype.com/bigclassic/bry%2Ebibat" style="border: none;" width="182" height="44" alt="My status" /></a>
+        .span6
+          %h3 Network
+          %p.social-network Visit my sites at
+          %ul
+            %li
+              %a{:href => "http://twitter.com/bry_bibat"} Twitter
+            %li
+              %a{:href => "https://github.com/bryanbibat"} GitHub
+            %li
+              %a{:href => "https://plus.google.com/104632444453004296785"} Google Plus
+            %li
+              %a{:href => "https://speakerdeck.com/u/bryanbibat"} Speaker Deck
+
+      .row#portfolio
+        .span12
+          %h3 My works
+          %p
+            While I may have worked with a bunch of platforms (and almost 
+            all major commercial databases) in my previous work, I can't 
+            put them here because of these three letters: 
+            <a href="http://en.wikipedia.org/wiki/Non-disclosure_agreement">NDA</a>.
+          %p
+            Given that all of my major projects for the <a href="http://www.gov.hk/en/">HK SARG</a>, 
+            I chose not to include them in my portfolio rather than risk
+            having Jackie Chan or Jet Li-type policemen barge in my house and 
+            take me away somewhere.
+          %p
+            Anyway, here is my portfolio, a short list of stuff I made post-enterprise development:
+
+      .row#projects
+        .span12
+          %h4 projects
+      .row.entry
+        .span12
+          .screenshots.pull-right 
+            %img.img-polaroid{:src => image_path("pd.jpg")}
+          .description
+            %h5
+              %img{:src => image_path("pd.png"), :title => "Pangkaraniwang Developer", :alt => "Pangkaraniwang Developer"}
+            %p
+              %label Status:
+              "throwaway"
+            
+            %p I want to teach software development to every Filipino who wants to learn how to build software.
+            %p This video blog/wiki is my way of doing just that.
+            %p
+              %label Website:
+              %a{:href => "http://pd.bryanbibat.net/"}http://pd.bryanbibat.net/
+      .row.entry
+        .span12
+          .screenshots.pull-right
+            %a.colorbox{:href => image_path("rails-ftw01-installer.png")}
+              %img.img-polaroid{:src => image_path("rails-ftw01-installer.jpg")}/
+          .description
+            %h5
+              %img{:alt => "RailsFTW", :src => image_path("railsftw.png"), :title => "RailsFTW"}/
+            %p
+              %label Status:
+              Released
+            %p
+              In my experience, one of the most annoying parts about teaching
+              Ruby on Rails is installing the whole thing. Whether it's the
+              training room having limited internet connection or the students
+              blatantly ignoring the steps written in the training manual,
+              expect a bunch of stuff to crop up at the start of the training
+              to waste 2-3 hours of your allotted time.
+            %p
+              To remedy this problem, I've modified the official Ruby Installer
+              for Windows to include all the necessary gems and dependencies to
+              allow a trainee to start building Rails apps in less than 5 minutes.
+            %p
+              %label Website:
+              %a{:href => "http://railsftw.bryanbibat.net/"} http://railsftw.bryanbibat.net/
+
+      .row#books
+        .span12
+          %h4 books
+      .row.entry
+        .span12
+          .screenshots.pull-right
+            %img.img-polaroid{:src => image_path("stum01.png")}/
+          .description
+            %h5 Ruby on Rails 3.0: A Free Student Manual
+            %p
+              %label Status:
+              Released
+            %p
+              With Rails 3.1 now out, I've decided to give away my student manual for Rails 3.0.
+            %p
+              %label Coverage:
+              %ul
+                %li Ruby on Rails 3.0
+                %li RSpec 2.5
+                %li a bit of jQuery
+            %p
+              %label Website:
+              %a{:href => "https://github.com/bryanbibat/rails-3_0-tutorial"} https://github.com/bryanbibat/rails-3_0-tutorial
+
+      .row#web-apps
+        .span12
+          %h4 web applications
+      .row.entry
+        .span12
+          .screenshots.pull-right
+            %a.colorbox{:href => image_path("lotto.png")}
+              %img.img-polaroid{:src => image_path("lotto.jpg")}/
+          .description
+            %h5 Lotto Simulator
+            %p
+              %label Status:
+              Online, open to the public
+            %p
+              Just a small web app I made to show the futility of playing the lotto while showcasing some new features of Rails 3.0.
+            %p
+              Blog post
+              = succeed "." do
+                %a{:href => "http://blog.bryanbibat.net/2010/10/04/tax-for-the-poor-and-mathematically-challenged/"} here
+            %p
+              %label Technologies Used:
+              %ul
+                %li Ruby on Rails 3.0
+                %li MySQL
+                %li jQuery
+            %p
+              %label Website:
+              %a{:href => "http://apps.bryanbibat.net/lotto/"} http://apps.bryanbibat.net/lotto/
+            %p
+              %label Source Code:
+              %a{:href => "http://github.com/bryanbibat/lotto"} view it at GitHub
+
+      .row.entry
+        .span12
+          .screenshots.pull-right
+            %a.colorbox{:href => image_path("project_r.jpg")}
+              %img.img-polaroid{:src => image_path("project_r_thumb.jpg")}/
+          .description
+            %h5 Project Я: A Ruby/HTML5 Visual Novel
+            %p
+              %label Status:
+              Online, open to the public
+            %p
+              A tech-demo I made for the Global Game Jam 2012. I couldn't think of a good game so I just went ahead and played with web technologies.
+            %p
+              Blog post
+              = succeed "." do
+                %a{:href => "http://blog.bryanbibat.net/2012/02/18/project-%d1%8f-a-rubyhtml5-visual-novel/"} here
+            %p
+              %label Technologies Used:
+              %ul
+                %li Ruby on Rails 3.0
+                %li MySQL
+                %li vn-canvas
+            %p
+              %label Website:
+              %a{:href => "http://gamejam.bryanbibat.net/"} http://gamejam.bryanbibat.net/
+
+      .row#mobile-apps
+        .span12
+          %h4 mobile applications
+      .row.entry
+        .span12
+          .screenshots.pull-right
+            %a.colorbox{:href => image_path("gol-wallpaper.png")}
+              %img.img-polaroid{:src => image_path("gol-wallpaper.jpg")}/
+          .description
+            %h5 Conway's Game of Life Live Wallpaper
+            %p
+              %label Status:
+              Free for download at Google Play
+            %p
+              This is a Live Wallpaper implementation of Conway's Game of Life coded during the (non-official) Philippine leg of the Global Day of Code Retreat 2011.
+            %p
+              I needed a new geeky wallpaper and a cute thing to code for the event. This was killing two birds with one stone.
+            %p
+              %label Technologies Used:
+              %ul
+                %li Java
+                %li Android SDK
+            %p
+              %label Website:
+              %a{:href => "https://play.google.com/store/apps/details?id=net.bryanbibat.apps"} Get it at Google Play
+            %p
+              (If you can't find the app via your phone's Market search, try using the search terms "code retreat".)
+
+
+      .row#gems
+        .span12
+          %h4 ruby gems
+      .row.entry
+        .span12
+          .screenshots.pull-right
+            %img.img-polaroid{:src => image_path("ffnpdf.jpg")}/
+          .description
+            %h5 ffnpdf
+            %p
+              %label Status:
+              Released, with occasional updates
+            %p
+              A practice gem I made to learn gem publishing.
+            %p
+              Converts FanFiction.net stories into PDF.
+            %p
+              Blog post
+              = succeed "." do
+                %a{:href => "http://blog.bryanbibat.net/2012/02/19/convert-fanfiction-net-stories-into-pdf/"} here
+            %p
+              %label Technologies Used:
+              %ul
+                %li Ruby 1.9
+            %p
+              %label Gem Page:
+              %a{:href => "http://rubygems.org/gems/ffnpdf"} http://rubygems.org/gems/ffnpdf
+            %p
+              %label Source Code:
+              %a{:href => "http://github.com/bryanbibat/ffnpdf"} view it at GitHub
+
+      .row#bio
+        .span12
+          %h3 About me
+          %p
+            I'm a enterprise software engineer by trade but I got sick of the
+            whole corporate world life and quit my job. Nowadays, I spend my time
+            %strike playing online games
+            doing research for my blog,
+            building side projects, and taking occassional freelance jobs.
+          %p
+            Aside from development work, I also like to teach, especially given
+            that local CS degree courses tend to be detached from the reality of
+            software development.
+            %a{:href => "http://blog.bryanbibat.net/tag/public-talk/"} Public speaking
+            is also one of my unusual hobbies, as unlike most of my software
+            development colleagues, I'm not afraid to talk about stuff that I'm
+            passionate about.
+          %p
+            My contact details are at the end of the
+            %a{:href => "#services", :onclick => "$.scrollTo('#services', 200 ); return false;"} services
+            section above.
+    .footer
+      .container
+        .row
+          .span12
+            %p.copyright
+              Copyright &copy;2011 - 2013 
+              %a{:href => "http://bryanbibat.net"} Bryan Bibat
+            %p.powered
+              Made with <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
+              <a href="http://bootswatch.com/spacelab/">Spacelab Bootswatch</a>, and
+              <a href="https://github.com/kalasjocke/sinatra-asset-pipeline">sinatra-asset-pipeline</a>.
+    %script{:type => "text/javascript", :src => "//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"}\
+    %script{:type => "text/javascript", :src => "//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.4.10/jquery.smooth-scroll.min.js"}\
+    %script{:type => "text/javascript", :src => "//cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.3/jquery.colorbox-min.js"}\
+    %script{:type => "text/javascript", :src => javascript_path("app")}\
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-8760525-5']);
+      _gaq.push(['_setDomainName', '.bryanbibat.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    :javascript
+      var pkBaseURL = (("https:" == document.location.protocol) ? "https://analytics.bryanbibat.net/" : "http://analytics.bryanbibat.net/");
+      document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    :javascript
+      try {
+      var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+      piwikTracker.trackPageView();
+      piwikTracker.enableLinkTracking();
+      } catch( err ) {}
+    %noscript
+      <img src="http://analytics.bryanbibat.net/piwik.php?idsite=1" style="border:0" alt="" />
+    %script{:type => "text/javascript", :src => "http://download.skype.com/share/skypebuttons/js/skypeCheck.js"}\
