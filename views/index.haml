@@ -33,7 +33,7 @@
               %li
                 %a{:href => "#about"} About
               %li
-                %a{:href => "#services"} Services
+                %a{:href => "#skills"} Skills
               %li
                 %a{:href => "#connect"} Connect
               %li
@@ -69,25 +69,25 @@
           %img.pull-right{ :src => image_path("profile.jpg"), :alt => "profile pic", :title => "me pwning mac users with my trusty netbook" }
           %p
             Hi, I'm <span class="highlight">Bryan Bibat</span> and I'm a 
-            <span class="highlight">freelance software engineer</span>
+            <span class="highlight"><strong>retired</strong> software engineer</span>
             based in Taguig City, Philippines. I have 9 years of experience in 
             developing software, mainly web applications.
           %p
             This is my mini-portfolio website. Here you can <a href="#portfolio">browse</a> 
             what little work I could claim as my own (long story, just click the 
-            link for a short explanation). You could also check what <a href="#services">services</a> 
-            I offer.
+            link for a short explanation). You could also check what <a href="#skills">skills</a> 
+            I used to offer.
           %p.last-para
             I guess you have some time on your hands since you're still reading this. In that case, you might want to head over to the <a href="#bio">bio</a> section to know more about me. If you <em>really</em> have a lot of time on your hands, why not head over to <a href="http://blog.bryanbibat.net">my blog</a> and read about the geeky stuff I'm into.
 
-      .row#services
+      .row#skills
         .span12
-          %h3 Services
+          %h3 Skills
           %h4 Important note
           %p
-            %strong.highlight I am only available for contractual or part-time work.
+            %strong.highlight I have retired from professional web software development.
           %h4 
-          %h4 I normally offer the following services:
+          %h4 I used to offer the following services:
           %ul
             %li
               %strong Web Development
@@ -101,25 +101,6 @@
               %em Pangkaraniwang Developer
               below.
           
-          %h4
-            I 
-            %span.do-not do not 
-            offer the following services:
-
-          %ul
-            %li
-              %strong Web / Graphic Design work 
-              \- this page would've been much prettier if I was a designer.
-            %li
-              %strong Academic work e.g. thesis writing, solving machine problems
-              \- I don't want to lower further the standards of local IT professionals. Instead of making me do your dirty work, I would prefer that you hire me as a tutor.
-            %li
-              %strong Non-agile "grunt-work" 
-              \- I don't want to work 40+ hour work weeks on your run-of-the-mill software sweatshop.
-            %li
-              %strong Non-Rails teaching gigs without training material 
-              \- Good training material requires at least a month of preparation. Asking me to teach a class without those on hand would effectively reduce my trainer's fee by 80%. In short, if you don't have training material for the course I'm going to teach, prepare to pay me for the extra effort.
-          
       .row#connect
         .span6
           %h3 Contact
@@ -127,7 +108,7 @@
             For inquiries, you can contact me at my e-mail address 
             <a href="mailto:bry@bryanbibat.net">bry@bryanbibat.net</a>.
           %p You can also contact me through skype (<a href="skype:bry.bibat?chat">bry.bibat</a>) as long as I am online.
-          
+
           %script{:src => "//cdn.dev.skype.com/uri/skype-uri.js", :type => "text/javascript"}
           %div{:id => "SkypeButton_Chat_bry.bibat_1"}
             :javascript
@@ -137,6 +118,17 @@
                 "participants": ["bry.bibat"],
                 "imageSize": 32
               });
+
+          %p 
+            %strong Please note 
+            that I may choose to ignore your inquiries for obvious (<em>MLM recruitment, asking me to do free work</em>) and not-so-obvious reasons.
+            
+          %p 
+            If you absolutely have to get in touch with me, your best bet is to meet me at the next 
+            %a{:href => "#bio"} PhRUG or DevCon
+            event.
+
+
         .span6
           %h3 Network
           %p.social-network Visit my sites at
@@ -197,7 +189,7 @@
               %img{:alt => "RailsFTW", :src => image_path("railsftw.png"), :title => "RailsFTW"}/
             %p
               %label Status:
-              Released
+              Released, no longer updated
             %p
               In my experience, one of the most annoying parts about teaching
               Ruby on Rails is installing the whole thing. Whether it's the
@@ -236,6 +228,57 @@
             %p
               %label Website:
               %a{:href => "https://github.com/bryanbibat/rails-3_0-tutorial"} https://github.com/bryanbibat/rails-3_0-tutorial
+
+      .row#web-sites
+        .span12
+          %h4 web sites
+      .row.entry
+        .span12
+          .screenshots.pull-right
+            %a.colorbox{:href => image_path("devcon-site.png")}
+              %img.img-polaroid{:src => image_path("devcon-site.jpg")}/
+          .description
+            %h5 
+              Developers Connect Philippines - 
+              %a{:href => "http://devcon.ph/"} http://devcon.ph/
+            %p
+              %label Status:
+              Online, open to the public
+            %p
+              I'm a major contributor and the site sys admin for DevCon's website.
+            %p
+              %label Technologies Used:
+              %ul
+                %li Ruby on Rails 3.2 (soon to be 4.0)
+                %li PostgreSQL
+                %li Twitter Bootstrap
+            %p
+              %label Source Code:
+              %a{:href => "http://github.com/devcon-ph/devcon"} view it at GitHub
+
+      .row.entry
+        .span12
+          .screenshots.pull-right
+            %a.colorbox{:href => image_path("pinoyrb.png")}
+              %img.img-polaroid{:src => image_path("pinoyrb.jpg")}/
+          .description
+            %h5 
+              Philippine Ruby Users Group - 
+              %a{:href => "http://pinoyrb.org/"} http://pinoyrb.org/
+            %p
+              %label Status:
+              Online, open to the public
+            %p
+              As with DevCon, I'm a major contributor and the site sys admin for PhRUG's website.
+            %p
+              %label Technologies Used:
+              %ul
+                %li Ruby on Rails 3.2 (soon to be 4.0)
+                %li PostgreSQL
+                %li Twitter Bootstrap
+            %p
+              %label Source Code:
+              %a{:href => "http://github.com/phrug/pinoyrb"} view it at GitHub
 
       .row#web-apps
         .span12
@@ -323,38 +366,6 @@
             %p
               (If you can't find the app via your phone's Market search, try using the search terms "code retreat".)
 
-
-      .row#gems
-        .span12
-          %h4 ruby gems
-      .row.entry
-        .span12
-          .screenshots.pull-right
-            %img.img-polaroid{:src => image_path("ffnpdf.jpg")}/
-          .description
-            %h5 ffnpdf
-            %p
-              %label Status:
-              Released, with occasional updates
-            %p
-              A practice gem I made to learn gem publishing.
-            %p
-              Converts FanFiction.net stories into PDF.
-            %p
-              Blog post
-              = succeed "." do
-                %a{:href => "http://blog.bryanbibat.net/2012/02/19/convert-fanfiction-net-stories-into-pdf/"} here
-            %p
-              %label Technologies Used:
-              %ul
-                %li Ruby 1.9
-            %p
-              %label Gem Page:
-              %a{:href => "http://rubygems.org/gems/ffnpdf"} http://rubygems.org/gems/ffnpdf
-            %p
-              %label Source Code:
-              %a{:href => "http://github.com/bryanbibat/ffnpdf"} view it at GitHub
-
       .row#bio
         .span12
           %h3 About me
@@ -362,16 +373,8 @@
             I'm a enterprise software engineer by trade but I got sick of the
             whole corporate world life and quit my job. Nowadays, I spend my time
             %strike playing online games
-            doing research for my blog,
-            building side projects, and taking occassional freelance jobs.
-          %p
-            Aside from development work, I also like to teach, especially given
-            that local CS degree courses tend to be detached from the reality of
-            software development.
-            %a{:href => "http://blog.bryanbibat.net/tag/public-talk/"} Public speaking
-            is also one of my unusual hobbies, as unlike most of my software
-            development colleagues, I'm not afraid to talk about stuff that I'm
-            passionate about.
+            lending my time to software development-related outreach programs (ie. speaking in seminars, volunteering in events),
+            building side projects, and doing research for my blog.
           %p
             I am also currently the VP for Technology of 
             %a{:href => "http://devcon.ph"} Developers Connect Philippines
@@ -381,7 +384,7 @@
             (PhRUG).
           %p
             My contact details are at the end of the
-            %a{:href => "#services"} services
+            %a{:href => "#skills"} skills
             section above.
     .footer
       .container

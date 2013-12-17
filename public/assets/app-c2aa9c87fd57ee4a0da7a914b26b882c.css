@@ -7793,6 +7793,9 @@ h3, h4 {
 
 h4, h5 {
   font-weight: bold; }
+  h4 a, h5 a {
+    font-weight: normal;
+    font-size: 90%; }
 
 label {
   font-weight: bold; }
