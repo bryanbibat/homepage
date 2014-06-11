@@ -4,7 +4,7 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %link{:rel => "stylesheet", :href => stylesheet_path('app') } 
+    = stylesheet_link_tag 'app'
     %title Bryan Bibat | Robot Zombie Software Developer
     %meta{:content => "A portfolio website of a software engineer", :name => "description"}/
     %meta{:content => "Bryan Bibat | Robot Zombie Software Developer", :property => "og:title"}/
@@ -391,15 +391,15 @@
             %p.powered
               Made with <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
               <a href="http://bootswatch.com/spacelab/">Spacelab Bootswatch</a>, and
-              <a href="https://github.com/kalasjocke/sinatra-asset-pipeline">sinatra-asset-pipeline</a>.
+              <a href="http://middlemanapp.com">Middleman</a>.
             %p <a href="https://github.com/bryanbibat/homepage">Fork this on Github</a>
     %script{:type => "text/javascript", :src => "//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"}\
     %script{:type => "text/javascript", :src => "//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.4.10/jquery.smooth-scroll.min.js"}\
     %script{:type => "text/javascript", :src => "//cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.3/jquery.colorbox-min.js"}\
     %script{:type => "text/javascript", :src => "//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.4.10/jquery.smooth-scroll.min.js"}\
     %script{:type => "text/javascript", :src => "//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"}\
-    %script{:type => "text/javascript", :src => javascript_path("app")}\
-    - if ENV['RACK_ENV'] == "production"
+    = javascript_include_tag 'app'\
+    - if build?
       :javascript
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-8760525-5']);
@@ -423,3 +423,4 @@
         } catch( err ) {}
       %noscript
         <img src="http://analytics.bryanbibat.net/piwik.php?idsite=1" style="border:0" alt="" />
+
