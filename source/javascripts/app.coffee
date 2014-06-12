@@ -1,4 +1,5 @@
 #= require bootstrap
+#= require headroom
 
 $ ->
   $(".colorbox").colorbox()
@@ -16,3 +17,5 @@ $ ->
           offset: 0
 
     $(window).trigger "hashchange"
+  headroom = new Headroom(document.querySelector(".navbar"))
+  headroom.init()
