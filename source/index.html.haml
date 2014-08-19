@@ -20,36 +20,36 @@
     /[if lt IE 9]
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   %body{:"data-spy" => "scroll", :"data-target" => ".navbar", :"data-offset" => "40"}
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+    .navbar.navbar-fixed-top.navbar-default
+      .container
+        .navbar-header
+          %a.btn.navbar-toggle{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "http://bryanbibat.net"} Bryan Bibat
-          #main-menu.nav-collapse.collapse
-            %ul#main-menu-left.nav
-              %li
-                %a{:href => "#about"} About
-              %li
-                %a{:href => "#skills"} Skills
-              %li
-                %a{:href => "#connect"} Connect
-              %li
-                %a{:href => "#portfolio"} Portfolio
-              %li
-                %a{:href => "#bio"} Bio
-              %li
-                %a{:href => "http://blog.bryanbibat.net"} 
-                  Blog
-                  %i.icon-share-alt
-              %li
-                %a{:href => "https://leanpub.com/u/bryanbibat"} 
-                  Bookstore
-                  %i.icon-share-alt
+          %a.navbar-brand{:href => "http://bryanbibat.net"} Bryan Bibat
+        #main-menu.navbar-collapse.collapse
+          %ul#main-menu-left.nav.navbar-nav
+            %li
+              %a{:href => "#about"} About
+            %li
+              %a{:href => "#skills"} Skills
+            %li
+              %a{:href => "#connect"} Connect
+            %li
+              %a{:href => "#portfolio"} Portfolio
+            %li
+              %a{:href => "#bio"} Bio
+            %li
+              %a{:href => "http://blog.bryanbibat.net"} 
+                Blog
+                %span.glyphicon.glyphicon-share-alt
+            %li
+              %a{:href => "https://leanpub.com/u/bryanbibat"} 
+                Bookstore
+                %span.glyphicon.glyphicon-share-alt
 
-    .hero-unit
+    .jumbotron
       %h1
         %span.highlight> BRYAN
         BIBAT
@@ -68,7 +68,7 @@
         %span.robot-zombie robot zombies
     .container.main-container
       .row#about
-        .span12
+        .col-md-12
           %h3 About this site
           %img.pull-right{ :src => image_path("profile.jpg"), :alt => "profile pic", :title => "me pwning mac users with my trusty netbook" }
           %p
@@ -84,7 +84,7 @@
             I guess you have some time on your hands since you're still reading this. In that case, you might want to head over to the <a href="#bio">bio</a> section to know more about me. If you <em>really</em> have a lot of time on your hands, why not head over to <a href="http://blog.bryanbibat.net">my blog</a> and read about the geeky stuff I'm into. I also have a <a href="https://leanpub.com/u/bryanbibat">bookstore</a> over at Leanpub where I'm crowdfunding future books. 
 
       .row#skills
-        .span12
+        .col-md-12
           %h3 Skills
           %h4 Important note
           %p
@@ -105,7 +105,7 @@
               below.
           
       .row#connect
-        .span6
+        .col-md-6
           %h3 Contact
           %p
             For inquiries, you can contact me at my e-mail address 
@@ -132,7 +132,7 @@
             event.
 
 
-        .span6
+        .col-md-6
           %h3 Network
           %p.social-network Visit my sites at
           %ul
@@ -146,11 +146,9 @@
               %a{:href => "https://speakerdeck.com/bryanbibat"} Speaker Deck
             %li
               %a{:href => "http://youtube.com/user/bryanbibat"} YouTube
-            %li
-              %a{:href => "http://www.twitch.tv/datenshizero"} Twitch.tv
 
       .row#portfolio
-        .span12
+        .col-md-12
           %h3 My works
           %p
             While I may have worked with a bunch of platforms (and almost 
@@ -158,211 +156,263 @@
             put them here because of these three letters: 
             <a href="http://en.wikipedia.org/wiki/Non-disclosure_agreement">NDA</a>.
           %p
-            Anyway, here is my portfolio, a short list of stuff I made post-enterprise development (books moved over to <a href="https://leanpub.com/u/bryanbibat">Leanpub</a>):
+            Anyway, here is my portfolio, a short list of stuff I made post-enterprise development:
 
+      .row#books
+        .col-md-12
+          %h4 books
+      .row.entry
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots 
+              %iframe{ :width => "380", :height => "350", :src => "https://leanpub.com/html5shootemupinanafternoon/embed", :frameborder => "0", :allowtransparency => "true" }
+            .col-md-pull-6.col-md-6.description
+              %h5 HTML5 Shoot 'em Up in an Afternoon
+              %p
+                %label Status:
+                published, continuously updated
+              
+              %p Originally a rushed manual for a <a href="http://devcon.ph/events/game-development-camp" target="_self">weekend workshop of 40 people</a>, I've expanded this book to include more pictures and diagrams to make it easier for beginners to grasp basic game concepts.
+              %p
+                %label Website:
+                %a{:href => "https://leanpub.com/html5shootemupinanafternoon"}https://leanpub.com/html5shootemupinanafternoon
       .row#projects
-        .span12
+        .col-md-12
           %h4 projects
       .row.entry
-        .span12
-          .screenshots.pull-right 
-            %img.img-polaroid{:src => image_path("pd.jpg")}
-          .description
-            %h5
-              %img{:src => image_path("pd.png"), :title => "Pangkaraniwang Developer", :alt => "Pangkaraniwang Developer"}
-            %p
-              %label Status:
-              "throwaway"
-            
-            %p I want to teach software development to every Filipino who wants to learn how to build software.
-            %p This video blog/wiki is my way of doing just that.
-            %p
-              %label Website:
-              %a{:href => "http://pd.bryanbibat.net/"}http://pd.bryanbibat.net/
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots 
+              %img.img-polaroid{:src => image_path("pd.jpg")}
+            .col-md-pull-6.col-md-6.description
+              %h5
+                %img{:src => image_path("pd.png"), :title => "Pangkaraniwang Developer", :alt => "Pangkaraniwang Developer"}
+              %p
+                %label Status:
+                "throwaway"
+              
+              %p I want to teach software development to every Filipino who wants to learn how to build software.
+              %p This video blog/wiki is my way of doing just that.
+              %p
+                %label Website:
+                %a{:href => "http://pd.bryanbibat.net/"}http://pd.bryanbibat.net/
       .row.entry
-        .span12
-          .screenshots.pull-right
-            %a.colorbox{:href => image_path("rails-ftw01-installer.png")}
-              %img.img-polaroid{:src => image_path("rails-ftw01-installer.jpg")}/
-          .description
-            %h5
-              %img{:alt => "RailsFTW", :src => image_path("railsftw.png"), :title => "RailsFTW"}/
-            %p
-              %label Status:
-              Released, no longer updated
-            %p
-              In my experience, one of the most annoying parts about teaching
-              Ruby on Rails is installing the whole thing. Whether it's the
-              training room having limited internet connection or the students
-              blatantly ignoring the steps written in the training manual,
-              expect a bunch of stuff to crop up at the start of the training
-              to waste 2-3 hours of your allotted time.
-            %p
-              To remedy this problem, I've modified the official Ruby Installer
-              for Windows to include all the necessary gems and dependencies to
-              allow a trainee to start building Rails apps in less than 5 minutes.
-            %p
-              %label Website:
-              %a{:href => "http://railsftw.bryanbibat.net/"} http://railsftw.bryanbibat.net/
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("rails-ftw01-installer.png")}
+                %img.img-polaroid{:src => image_path("rails-ftw01-installer.jpg")}/
+            .col-md-pull-6.col-md-6.description
+              %h5
+                %img{:alt => "RailsFTW", :src => image_path("railsftw.png"), :title => "RailsFTW"}/
+              %p
+                %label Status:
+                Released, rarely updated
+              %p
+                In my experience, one of the most annoying parts about teaching
+                Ruby on Rails is installing the whole thing. Whether it's the
+                training room having limited internet connection or the students
+                blatantly ignoring the steps written in the training manual,
+                expect a bunch of stuff to crop up at the start of the training
+                to waste 2-3 hours of your allotted time.
+              %p
+                To remedy this problem, I've modified the official Ruby Installer
+                for Windows to include all the necessary gems and dependencies to
+                allow a trainee to start building Rails apps in less than 5 minutes.
+              %p
+                %label Website:
+                %a{:href => "http://railsftw.bryanbibat.net/"} http://railsftw.bryanbibat.net/
 
       .row#web-sites
-        .span12
+        .col-md-12
           %h4 web sites
       .row.entry
-        .span12
-          .screenshots.pull-right
-            %a.colorbox{:href => image_path("devcon-site.png")}
-              %img.img-polaroid{:src => image_path("devcon-site.jpg")}/
-          .description
-            %h5 
-              Developers Connect Philippines - 
-              %a{:href => "http://devcon.ph/"} http://devcon.ph/
-            %p
-              %label Status:
-              Online, open to the public
-            %p
-              I'm a major contributor and the site sys admin for DevCon's website.
-            %p
-              %label Technologies Used:
-              %ul
-                %li Ruby on Rails 3.2 (soon to be 4.0)
-                %li PostgreSQL
-                %li Twitter Bootstrap
-            %p
-              %label Source Code:
-              %a{:href => "http://github.com/devcon-ph/devcon"} view it at GitHub
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("devcon-site.png")}
+                %img.img-polaroid{:src => image_path("devcon-site.jpg")}/
+            .col-md-pull-6.col-md-6.description
+              %h5 
+                Developers Connect Philippines - 
+                %a{:href => "http://devcon.ph/"} http://devcon.ph/
+              %p
+                %label Status:
+                Online, open to the public
+              %p
+                I'm a major contributor and the site sys admin for DevCon's website.
+              %p
+                %label Technologies Used:
+                %ul
+                  %li Ruby on Rails 3.2 (soon to be 4.0)
+                  %li PostgreSQL
+                  %li Twitter Bootstrap
+              %p
+                %label Source Code:
+                %a{:href => "http://github.com/devcon-ph/devcon"} view it at GitHub
 
       .row.entry
-        .span12
-          .screenshots.pull-right
-            %a.colorbox{:href => image_path("pinoyrb.png")}
-              %img.img-polaroid{:src => image_path("pinoyrb.jpg")}/
-          .description
-            %h5 
-              Philippine Ruby Users Group - 
-              %a{:href => "http://pinoyrb.org/"} http://pinoyrb.org/
-            %p
-              %label Status:
-              Online, open to the public
-            %p
-              As with DevCon, I'm a major contributor and the site sys admin for PhRUG's website.
-            %p
-              %label Technologies Used:
-              %ul
-                %li Ruby on Rails 3.2 (soon to be 4.0)
-                %li PostgreSQL
-                %li Twitter Bootstrap
-            %p
-              %label Source Code:
-              %a{:href => "http://github.com/phrug/pinoyrb"} view it at GitHub
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("pinoyrb.png")}
+                %img.img-polaroid{:src => image_path("pinoyrb.jpg")}/
+            .col-md-pull-6.col-md-6.description
+              %h5 
+                Philippine Ruby Users Group - 
+                %a{:href => "http://pinoyrb.org/"} http://pinoyrb.org/
+              %p
+                %label Status:
+                Online, open to the public
+              %p
+                As with DevCon, I'm a major contributor and the site sys admin for PhRUG's website.
+              %p
+                %label Technologies Used:
+                %ul
+                  %li Ruby on Rails 3.2 (soon to be 4.0)
+                  %li PostgreSQL
+                  %li Twitter Bootstrap
+              %p
+                %label Source Code:
+                %a{:href => "http://github.com/phrug/pinoyrb"} view it at GitHub
 
       .row#web-apps
-        .span12
+        .col-md-12
           %h4 web applications / games
       .row.entry
-        .span12
-          .screenshots.pull-right
-            %a.colorbox{:href => image_path("ricegrow.png")}
-              %img.img-polaroid{:src => image_path("ricegrow.jpg")}/
-          .description
-            %h5 RicegrowJS
-            %p
-              %label Status:
-              Online, open to the public
-            %p
-              Simple ~10 minute text-based game/simulator about rice farming
-            %p
-              %label Technologies Used:
-              %ul
-                %li Machina.js
-                %li jq-console
-            %p
-              %label Website:
-              %a{:href => "http://datenshizero.github.io/ricegrow-js/"} http://datenshizero.github.io/ricegrow-js/
-            %p
-              %label Source Code:
-              %a{:href => "http://github.com/datenshiZERO/ricegrow-js"} view it at GitHub
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("gunner-ssht.png")}
+                %img.img-polaroid{:src => image_path("gunner-ssht.jpg")}/
+            .col-md-pull-6.col-md-6.description
+              %h5 Gunner
+              %p
+                %label Status:
+                In progress 
+              %p An HTML5 clone of a relatively new type of arcade ticket redemption games.
+              %p
+                %label Technologies Used:
+                %ul
+                  %li Phaser
+              %p
+                %label Website:
+                %a{:href => "http://datenshizero.github.io/gunner/"} http://datenshizero.github.io/gunner/
+              %p
+                %label Blog Post:
+                %a{:href => "http://blog.bryanbibat.net/2014/08/03/making-an-html5-knockoff-of-chinese-arcade-game-knockoffs-with-phaser/"} Making an HTML5 knockoff of Chinese arcade game knockoffs with Phaser
+              %p
+                %label Source Code:
+                %a{:href => "http://github.com/datenshiZERO/gunner"} view it at GitHub
 
       .row.entry
-        .span12
-          .screenshots.pull-right
-            %a.colorbox{:href => image_path("wdfac.png")}
-              %img.img-polaroid{:src => image_path("wdfac.jpg")}/
-          .description
-            %h5 WDFAC
-            %p
-              %label Status:
-              Online, open to the public
-            %p
-              Simple browser game I made to practice JavaScript
-            %p
-              %label Technologies Used:
-              %ul
-                %li jQuery
-                %li Font Awesome
-            %p
-              %label Website:
-              %a{:href => "http://datenshizero.github.io/wdfac/"} http://datenshizero.github.io/wdfac/
-            %p
-              %label Source Code:
-              %a{:href => "http://github.com/datenshiZERO/wdfac"} view it at GitHub
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("ricegrow.png")}
+                %img.img-polaroid{:src => image_path("ricegrow.jpg")}/
+            .col-md-pull-6.col-md-6.description
+              %h5 RicegrowJS
+              %p
+                %label Status:
+                Online, open to the public
+              %p
+                Simple ~10 minute text-based game/simulator about rice farming
+              %p
+                %label Technologies Used:
+                %ul
+                  %li Machina.js
+                  %li jq-console
+              %p
+                %label Website:
+                %a{:href => "http://datenshizero.github.io/ricegrow-js/"} http://datenshizero.github.io/ricegrow-js/
+              %p
+                %label Source Code:
+                %a{:href => "http://github.com/datenshiZERO/ricegrow-js"} view it at GitHub
 
       .row.entry
-        .span12
-          .screenshots.pull-right
-            %a.colorbox{:href => image_path("project_r.jpg")}
-              %img.img-polaroid{:src => image_path("project_r_thumb.jpg")}/
-          .description
-            %h5 Project Я: A Ruby/HTML5 Visual Novel
-            %p
-              %label Status:
-              Online, open to the public
-            %p
-              A tech-demo I made for the Global Game Jam 2012. I couldn't think of a good game so I just went ahead and played with web technologies.
-            %p
-              Blog post
-              = succeed "." do
-                %a{:href => "http://blog.bryanbibat.net/2012/02/18/project-%d1%8f-a-rubyhtml5-visual-novel/"} here
-            %p
-              %label Technologies Used:
-              %ul
-                %li Ruby on Rails 3.0
-                %li MySQL
-                %li vn-canvas
-            %p
-              %label Website:
-              %a{:href => "http://gamejam.bryanbibat.net/"} http://gamejam.bryanbibat.net/
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("wdfac.png")}
+                %img.img-polaroid{:src => image_path("wdfac.jpg")}/
+            .col-md-pull-6.col-md-6.description
+              %h5 WDFAC
+              %p
+                %label Status:
+                Online, open to the public
+              %p
+                Simple browser game I made to practice JavaScript
+              %p
+                %label Technologies Used:
+                %ul
+                  %li jQuery
+                  %li Font Awesome
+              %p
+                %label Website:
+                %a{:href => "http://datenshizero.github.io/wdfac/"} http://datenshizero.github.io/wdfac/
+              %p
+                %label Source Code:
+                %a{:href => "http://github.com/datenshiZERO/wdfac"} view it at GitHub
+
+      .row.entry
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("project_r.jpg")}
+                %img.img-polaroid{:src => image_path("project_r_thumb.jpg")}/
+            .col-md-pull-6.col-md-6.description
+              %h5 Project Я: A Ruby/HTML5 Visual Novel
+              %p
+                %label Status:
+                Online, open to the public
+              %p
+                A tech-demo I made for the Global Game Jam 2012. I couldn't think of a good game so I just went ahead and played with web technologies.
+              %p
+                Blog post
+                = succeed "." do
+                  %a{:href => "http://blog.bryanbibat.net/2012/02/18/project-%d1%8f-a-rubyhtml5-visual-novel/"} here
+              %p
+                %label Technologies Used:
+                %ul
+                  %li Ruby on Rails 3.0
+                  %li MySQL
+                  %li vn-canvas
+              %p
+                %label Website:
+                %a{:href => "http://gamejam.bryanbibat.net/"} http://gamejam.bryanbibat.net/
 
       .row#mobile-apps
-        .span12
+        .col-md-12
           %h4 mobile applications
       .row.entry
-        .span12
-          .screenshots.pull-right
-            %a.colorbox{:href => image_path("gol-wallpaper.png")}
-              %img.img-polaroid{:src => image_path("gol-wallpaper.jpg")}/
-          .description
-            %h5 Conway's Game of Life Live Wallpaper
-            %p
-              %label Status:
-              Free for download at Google Play
-            %p
-              This is a Live Wallpaper implementation of Conway's Game of Life coded during the (non-official) Philippine leg of the Global Day of Code Retreat 2011.
-            %p
-              I needed a new geeky wallpaper and a cute thing to code for the event. This was killing two birds with one stone.
-            %p
-              %label Technologies Used:
-              %ul
-                %li Java
-                %li Android SDK
-            %p
-              %label Website:
-              %a{:href => "https://play.google.com/store/apps/details?id=net.bryanbibat.apps"} Get it at Google Play
-            %p
-              (If you can't find the app via your phone's Market search, try using the search terms "code retreat".)
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("gol-wallpaper.png")}
+                %img.img-polaroid{:src => image_path("gol-wallpaper.jpg")}/
+            .col-md-pull-6.col-md-6.description
+              %h5 Conway's Game of Life Live Wallpaper
+              %p
+                %label Status:
+                Free for download at Google Play
+              %p
+                This is a Live Wallpaper implementation of Conway's Game of Life coded during the (non-official) Philippine leg of the Global Day of Code Retreat 2011.
+              %p
+                I needed a new geeky wallpaper and a cute thing to code for the event. This was killing two birds with one stone.
+              %p
+                %label Technologies Used:
+                %ul
+                  %li Java
+                  %li Android SDK
+              %p
+                %label Website:
+                %a{:href => "https://play.google.com/store/apps/details?id=net.bryanbibat.apps"} Get it at Google Play
+              %p
+                (If you can't find the app via your phone's Market search, try using the search terms "code retreat".)
 
       .row#bio
-        .span12
+        .col-md-12
           %h3 About me
           %p
             I'm a enterprise software engineer by trade but I got sick of the
@@ -384,7 +434,7 @@
     .footer
       .container
         .row
-          .span12
+          .col-md-12
             %p.copyright
               Copyright &copy;2011 - 2014 
               %a{:href => "http://bryanbibat.net"} Bryan Bibat

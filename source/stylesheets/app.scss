@@ -1,10 +1,9 @@
 @import "bootstrap";
-@import "bootstrap-responsive";
 @import "font-awesome/font-awesome";
 @import "colorbox";
 @import "headroom";
 
-.hero-unit {
+.jumbotron {
   text-align: center;
   background: none;
   border: none;
@@ -42,8 +41,11 @@
   }
 }
 
-.screenshots img {
-  margin: 10px 0 20px 20px;
+.screenshots {
+  text-align: center;
+  img {
+    margin: 10px 0;
+  }
 }
 
 .hero-unit {
