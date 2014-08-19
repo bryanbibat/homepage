@@ -48,6 +48,18 @@
   }
 }
 
+@media only screen 
+and (max-width : 380px) {
+  .screenshots {
+    img, iframe {
+      width: 100%;
+    }
+  }
+  .description img {
+    width: 100%;
+  }
+}
+
 .hero-unit {
   padding-top: 80px;
   padding-bottom: 30px;
@@ -55,6 +67,10 @@
 
 h3, h4 {
   margin-top: 40px;
+}
+
+h5 {
+  font-size: 16px;
 }
 
 .highlight {
