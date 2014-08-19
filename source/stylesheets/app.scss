@@ -29,6 +29,30 @@
   }
 }
 
+@media only screen and (max-width : 480px) {
+  .jumbotron {
+    h1 {
+      font-size: 45px;
+      padding-top: 50px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width : 481px) and (max-width : 640px) {
+  .jumbotron {
+    h1 {
+      font-size: 70px;
+      padding-top: 30px;
+    }
+    h2 {
+      font-size: 21px;
+    }
+  }
+}
+
 #about {
   p {
     font-size: 120%;
@@ -38,6 +62,13 @@
   }
   img {
     margin: 0 0 20px 20px;
+  }
+}
+
+@media only screen 
+and (max-width : 480px) {
+  #about img {
+    width: 40%;
   }
 }
 
