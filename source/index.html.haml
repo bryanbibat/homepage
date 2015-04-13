@@ -325,6 +325,29 @@
         .col-md-12
           .row
             .col-md-push-6.col-md-6.screenshots
+              %a.colorbox{:href => image_path("tactics_full.png")}
+                %img.img-polaroid{:src => image_path("tactics_thumb.png")}/
+            .col-md-pull-6.col-md-6.description
+              %h5 Tactics?!?
+              %p
+                %label Status:
+                Open Beta
+              %p
+                Incremental SRPG I made to test some new features of Rails 4.2.
+              %p
+                %label Technologies Used:
+                %ul
+                  %li Ruby on Rails 4.2
+                  %li PostgreSQL/Redis
+                  %li Sidekiq
+              %p
+                %label Website:
+                %a{:href => "http://tactics.karaniwan.org/"} http://tactics.karaniwan.org/
+
+      .row.entry
+        .col-md-12
+          .row
+            .col-md-push-6.col-md-6.screenshots
               %a.colorbox{:href => image_path("gunner-ssht.png")}
                 %img.img-polaroid{:src => image_path("gunner-ssht.jpg")}/
             .col-md-pull-6.col-md-6.description
@@ -420,33 +443,6 @@
               %p
                 %label Source Code:
                 %a{:href => "http://github.com/datenshiZERO/wdfac"} view it at GitHub
-
-      .row.entry
-        .col-md-12
-          .row
-            .col-md-push-6.col-md-6.screenshots
-              %a.colorbox{:href => image_path("project_r.jpg")}
-                %img.img-polaroid{:src => image_path("project_r_thumb.jpg")}/
-            .col-md-pull-6.col-md-6.description
-              %h5 Project Я: A Ruby/HTML5 Visual Novel
-              %p
-                %label Status:
-                Online, open to the public
-              %p
-                A tech-demo I made for the Global Game Jam 2012. I couldn't think of a good game so I just went ahead and played with web technologies.
-              %p
-                Blog post
-                = succeed "." do
-                  %a{:href => "http://blog.bryanbibat.net/2012/02/18/project-%d1%8f-a-rubyhtml5-visual-novel/"} here
-              %p
-                %label Technologies Used:
-                %ul
-                  %li Ruby on Rails 3.0
-                  %li MySQL
-                  %li vn-canvas
-              %p
-                %label Website:
-                %a{:href => "http://gamejam.bryanbibat.net/"} http://gamejam.bryanbibat.net/
 
       .row#mobile-apps
         .col-md-12
